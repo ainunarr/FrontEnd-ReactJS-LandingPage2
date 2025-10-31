@@ -5,7 +5,7 @@ class Footer extends Component {
     render() {
         return (
             <StyledFooter>
-                Copyright &copy; Ainun; 2024
+                Disclaimer &copy; Informasi yang tersedia hanyalah untuk kepentingan desain semata.
             </StyledFooter>
         );
     }

@@ -113,7 +113,7 @@ const Body = () => {
           <AboutHeading>FULLSUN.ID</AboutHeading>
           <p>FULLSUN.ID menghadirkan cita rasa kopi dengan nuansa klasik yang dapat membuat Anda ber-nostalgia</p>
           <ButtonStyle onClick={handleClickDashboard}>
-            CONTACT US
+            HUBUNGI KAMI
           </ButtonStyle>
         </AboutText>
       </AboutStyle>
@@ -177,7 +177,7 @@ const Body = () => {
         <ContactInfo>
           <p>Nama: FullSun Coffee Shop</p>
           <p>Alamat: Jl. Raya Timur</p>
-          <p>Telepon: (012) 946-768-384</p>
+          <p>Telepon: (012) 94xxxxx</p>
           <p>Email: info@fullsuncoffee.com</p>
         </ContactInfo>
       </ContactSection>
@@ -185,24 +185,24 @@ const Body = () => {
       {/* Section Testimoni*/}
       <TestiStyle id="testimonial">
         <div>
-          <h1>Testimonial App</h1>
+          <h1>Testimoni</h1>
           <TestiForm>
             <label htmlFor="nama">Nama : </label>
             <input
               type="text"
-              placeholder="Enter author...."
+              placeholder="Masukkan nama...."
               value={inputAuthor}
               onChange={handleAuthorChange}
             />
             <label htmlFor="pesan">Pesan : </label>
             <textarea
-              placeholder="Enter testimonial...."
+              placeholder="Masukkan pesan...."
               value={inputText}
               onChange={handleTextChange}
-            />
-            <ButtonStyle onClick={addTestimonial}>Add Testimonial</ButtonStyle>
+            /><br></br><br></br>
+            <ButtonStyle onClick={addTestimonial}>Tambah Komentar</ButtonStyle>
           </TestiForm>
-          <hr></hr>
+          <br></br><hr></hr>
           <div className="testimonial-list" style={{ marginTop: "20px" }}>
             {testimonials.map((testimonial, index) => (
               <div className="box" key={index} style={{ marginBottom: "20px" }}>

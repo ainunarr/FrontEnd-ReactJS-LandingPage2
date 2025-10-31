@@ -16,7 +16,7 @@ const CoffeeDetail = ({ name, image, description }) => {
           <ModalContent>
             <CloseButton onClick={() => setShowDetail(false)}>&times;</CloseButton>
             <p>{description}</p>
-            <ButtonStyle onClick={() => alert(`Anda telah memesan ${name}`)}>Pesan</ButtonStyle>
+            <ButtonStyle onClick={() => alert(`Anda telah memesan biji kopi ${name}`)}>Pesan</ButtonStyle>
           </ModalContent>
         </ModalStyle>
       )}

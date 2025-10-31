@@ -9,11 +9,11 @@ class Header extends Component {
                 <NavStyle>
                     <img src={logo} style={{ height: "50px", width: "50px" }} alt="Logo"></img>
                     <UlStyle>
-                        <li><AStyle href="#home">Home</AStyle></li>
-                        <li><AStyle href="#about">About</AStyle></li>
+                        <li><AStyle href="#home">Beranda</AStyle></li>
+                        <li><AStyle href="#about">Tentang Kami</AStyle></li>
                         <li><AStyle href="#menu">Menu</AStyle></li> 
-                        <li><AStyle href="#shop">Shop</AStyle></li> 
-                        <li><AStyle href="#contact">Contact</AStyle></li> 
+                        <li><AStyle href="#shop">Belanja</AStyle></li> 
+                        <li><AStyle href="#contact">Kontak</AStyle></li> 
                         <li><AStyle href="#testimonial">Testimoni</AStyle></li> 
                     </UlStyle>
                 </NavStyle>
