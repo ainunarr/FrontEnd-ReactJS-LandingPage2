@@ -1,370 +1,290 @@
 import styled from 'styled-components';
 import BgBenner from './cover3.webp';
 
-// Benner
+/* =======================
+   BENNER
+======================= */
 export const BennerStyle = styled.section`
-    width: auto;
-    min-height: 80vh;
-    background-image: url(${BgBenner});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: grid;
-    align-items: center;
-    padding: 0 100px;
-`;
+  width: 100%;
+  min-height: 80vh;
+  background-image: url(${BgBenner});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  align-items: center;
+  padding: 0 100px;
 
-export const ButtonStyle = styled.button`
-    padding: 10px 40px;
-    border-radius: 0.3rem;
-    background: #725a43; 
-    color: #FFFFFF;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2px;
+  @media (max-width: 768px) {
+    padding: 0 40px;
+    min-height: 60vh;
+  }
 
-    &:hover {
-        background: #CD853F; 
-        color: #FFFFFF;
-    }
+  @media (max-width: 480px) {
+    padding: 0 20px;
+    text-align: center;
+  }
 `;
 
 export const BennerText = styled.div`
-    font-size: 3.4rem;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+  font-size: 3.4rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+  }
 `;
 
-// About
+export const ButtonStyle = styled.button`
+  padding: 10px 40px;
+  border-radius: 0.3rem;
+  background: #725a43; 
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+
+  &:hover {
+    background: #CD853F;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+`;
+
+/* =======================
+   ABOUT
+======================= */
 export const AboutStyle = styled.section`
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
-    align-items: center;
-    gap: 1.5rem;
-    padding: 0 100px;
-    background-color: #f8ece0
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 50px 100px;
+  background-color: #f8ece0;
+
+  @media (max-width: 768px) {
+    padding: 40px 40px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 30px 20px;
+  }
 `;
 
 export const AboutImg = styled.div`
+  border-radius: 0.5rem;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
     border-radius: 0.5rem;
-    margin-bottom: 20px;
+  }
 `;
 
 export const AboutHeading = styled.h2`
-    font-size: 0.938rem;
-    margin: 0.5rem 0 1.1rem;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
 `;
 
-export const AboutText = styled.div`
-    font-size: 0.938rem;
-    margin: 0.5rem 0 1.1rem;
+export const AboutText = styled.p`
+  font-size: 1rem;
+  line-height: 1.6;
 `;
 
-// Menu
-export const MenuHeading = styled.h2`
-    font-size: 2rem;
-    font-family: arial; 
-    text-align: center;
-    color: #000;
-    margin-bottom: 2.5rem;
-    margin-top: 0px;
-    padding-right: 30px;
-`;
-
+/* =======================
+   MENU
+======================= */
 export const MenuStyle = styled.section`
-    padding: 50px 20px;
-    text-align: center;
-    background-color: burlywood;
+  padding: 50px 20px;
+  text-align: center;
+  background-color: burlywood;
+`;
+
+export const MenuHeading = styled.h2`
+  font-size: 2rem;
+  text-align: center;
+  color: #000;
+  margin-bottom: 2.5rem;
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const MenuContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px; /* Menambahkan jarak antar item */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 `;
 
 export const MenuItem = styled.div`
-    width: 200px; 
-    border: 1px solid #7f5a47; 
-    border-radius: 8px; 
-    text-align: center;
-    transition: box-shadow 0.3s;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    padding: 10px; 
+  width: 200px;
+  border: 1px solid #7f5a47;
+  border-radius: 8px;
+  padding: 10px;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
 
-    &:hover {
-        box-shadow: 0px 0px 5px 0px #7f5a47; 
-    }
-`;
+  &:hover {
+    box-shadow: 0px 0px 5px #7f5a47;
+  }
 
-export const MenuImageContainer = styled.div`
-    overflow: hidden; 
-    border-bottom: 1px solid #7f5a47;
-    flex: 1; 
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 export const MenuImage = styled.img`
-    width: 100%; 
-    height: auto;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 `;
 
 export const MenuTitle = styled.h3`
-    margin-top: 10px;
-    font-size: 1rem; /* Mengatur ukuran font untuk konsistensi */
+  margin-top: 10px;
+  font-size: 1rem;
 `;
 
-export const MenuModalStyle = styled.div`
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex; /* Mengatur agar content berada di tengah */
-    justify-content: center;
-    align-items: center;
-`;
-
-export const MenuModalContent = styled.div`
-    background-color: #eadbc9; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px; /* Mengatur lebar maksimum untuk konsistensi */
-`;
-
-export const MenuCloseButton = styled.span`
-    color: #aaa;
-    position: absolute; /* Mengatur agar tombol close berada di pojok kanan atas */
-    top: 10px;
-    right: 10px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-        color: black;
-        text-decoration: none;
-    }
-`;
-
-export const ButtonBuyStyle = styled.button`
-    padding: 10px 40px;
-    border-radius: 0.3rem;
-    background: #D2B48C; 
-    color: #FFFFFF;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-
-    &:hover {
-        background: #CD853F; 
-        color: #FFFFFF;
-    }
-`;
-
-export const BuyButton = styled(ButtonStyle)`
-    background-color: #8B4513; 
-    margin-top: 5px;
-`;
-
-export const DetailButton = styled(ButtonStyle)`
-    background-color: #3887BE; 
-    margin-top: 5px;
-`;
-
-// Shop
+/* =======================
+   SHOP
+======================= */
 export const ShopStyle = styled.section`
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; 
-    gap: 20px; 
-    background-color: rgb(243, 200, 145);
+  background-color: rgb(243, 200, 145);
+  padding: 40px 20px;
 `;
 
 export const ShopHeading = styled.h2`
-    font-size: 2rem;
-    font-family: arial; 
-    text-align: center;
-    color: #000;
-    margin-bottom: 2.5rem;
-    padding-right: 100px;
+  font-size: 2rem;
+  text-align: center;
+  color: #000;
+  margin-bottom: 2.5rem;
+
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const CoffeeContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-right: 10px;
-    padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 `;
 
 export const CoffeeDetailStyle = styled.div`
-    width: 200px; 
-    border: 1px solid #7f5a47; 
-    border-radius: 8px; 
-    text-align: center;
-    transition: box-shadow 0.3s;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between; 
-    padding: 10px; 
+  width: 200px;
+  border: 1px solid #7f5a47;
+  border-radius: 8px;
+  padding: 10px;
+  transition: 0.3s;
 
-    &:hover {
-        box-shadow: 0px 0px 5px 0px #7f5a47; 
-    }
-`;
+  &:hover {
+    box-shadow: 0 0 5px #7f5a47;
+  }
 
-export const CoffeeImageContainer = styled.div`
-    overflow: hidden; 
-    border-bottom: 1px solid #7f5a47;
-    flex: 1; 
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 export const CoffeeImage = styled.img`
-    width: 100%; 
-    height: auto;
+  width: 100%;
+  height: auto;
 `;
 
 export const CoffeeTitle = styled.h3`
-    margin-top: 10px;
-    font-size: 1rem; 
+  margin-top: 10px;
+  font-size: 1rem;
 `;
 
-export const ModalStyle = styled.div`
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-`;
-
-export const ModalContent = styled.div`
-    background-color: #eadbc9; 
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px; 
-`;
-
-export const CloseButton = styled.span`
-    color: #aaa;
-    position: absolute; 
-    top: 10px;
-    right: 10px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-
-    &:hover,
-    &:focus {
-        color: black;
-        text-decoration: none;
-    }
-`;
-
-// Contact 
-export const ContactHeading = styled.h2`
-    font-size: 2rem;
-    font-family: arial; 
-    text-align: center;
-    color: #000;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    padding-right: 100px;
-    padding-left: 100px;
-`;
-
+/* =======================
+   CONTACT
+======================= */
 export const ContactSection = styled.section`
-    background-color: #e6c19c; 
-    border-radius: 10px; 
-    padding: 20px 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 35px;
+  background-color: #e6c19c;
+  border-radius: 10px;
+  padding: 30px 100px;
+  margin: 40px auto;
+  max-width: 1000px;
+
+  @media (max-width: 768px) {
+    padding: 20px 40px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 15px 20px;
+    margin: 20px;
+  }
+`;
+
+export const ContactHeading = styled.h2`
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const ContactInfo = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 10px; 
-    padding: 20px;
-    border: 5px solid #7f5a47;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 5px solid #7f5a47;
+  padding: 20px;
+  border-radius: 10px;
 `;
 
-// Testimoni
+/* =======================
+   TESTIMONI
+======================= */
 export const TestiStyle = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
-    gap: 1.5rem;
-    margin-top: 2rem;
-    padding: 0 20px;
-    background-color: #ffe4ad;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  padding: 20px;
+  background-color: #ffe4ad;
 
-    .box {
-        padding: 20px;
-        border-radius: 0.5rem;
-        text-align: center;
-        background: #D2B48C;
-
-        p {
-            font-size: 0.938rem;
-        }
-
-        h2 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin: 0.5rem 0 0.5rem;
-        }
-    }
+  .box {
+    background: #d2b48c;
+    border-radius: 0.5rem;
+    padding: 20px;
+    text-align: center;
+  }
 `;
 
 export const TestiForm = styled.div`
-    width: 500px;
-    margin: 5px 5px;
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
 
-    label {
-        display: block;
-        margin-bottom: 10px;
-    }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
 
-    input[type="text"],
-    textarea {
-        width: 100%;
-        padding: 5px;
-        margin-bottom: 10px;
-    }
+  input, textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
 
-    input[type="submit"] {
-        background-color: #f9d3af; 
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-    }
+  input[type='submit'] {
+    background-color: #f9d3af;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
 `;
