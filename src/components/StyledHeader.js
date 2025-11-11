@@ -7,11 +7,26 @@ export const NavStyle = styled.nav`
   align-items: center;
   height: 60px;
   padding: 0 50px;
+  position: relative;
+
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+  }
 
   @media (max-width: 768px) {
     flex-direction: column;
-    height: auto;
+    align-items: flex-start;
     padding: 10px 20px;
+    height: auto;
+
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
   }
 `;
 
@@ -21,22 +36,22 @@ export const UlStyle = styled.ul`
   gap: 25px;
   margin: 0;
   padding: 0;
+  transition: all 0.3s ease-in-out;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
-    margin-top: 10px;
-  }
-`;
+    width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
 
-export const AStyle = styled.a`
-  text-decoration: none;
-  color: #000;
-  font-size: 1rem;
-  transition: color 0.3s;
-
-  &:hover {
-    color: #8b4513;
+    &.open {
+      max-height: 500px;
+      opacity: 1;
+      padding-top: 50px;
+    }
   }
 `;
